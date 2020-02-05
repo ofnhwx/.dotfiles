@@ -1,0 +1,10 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "submodules/anyenv-update"]
+	path = submodules/anyenv-update
+	url = https://github.com/znz/anyenv-update.git
+[submodule "submodules/prezto"]
+	path = submodules/prezto
+	url = https://github.com/sorin-ionescu/prezto.git

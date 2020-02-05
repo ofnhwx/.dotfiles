@@ -1,0 +1,19 @@
+[include]
+	path = .gitconfig.local
+[color]
+	ui = auto
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	excludesfile = ~/.gitignore.global
+[diff "cp932"]
+	textconv = iconv -f cp932
+[diff "sjis"]
+	textconv = iconv -f sjis
+[diff "nkf"]
+	textconv = nkf
+[diff "minjs"]
+	textconv = js-beautify
+	cachetextconv = true
+[diff "mincss"]
+	textconv = js-beautify --css
+	cachetextconv = true
