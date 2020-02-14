@@ -8,9 +8,11 @@
     ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
     ~/.config/fish/completions/docker-compose.fish: lib/fish/completions/docker-compose.fish
     ~/.config/fish/completions/docker.fish: lib/fish/completions/docker.fish
+    ~/.config/fish/completions/gibo.fish: submodules/gibo/shell-completions/gibo.fish
     ~/.config/fish/config.fish: lib/fish/config.fish
     ~/.config/fish/fishfile: lib/fish/fishfile
     ~/.config/fish/functions/fisher.fish: lib/fish/functions/fisher.fish
+    ~/.config/fish/functions/gibo.fish: lib/fish/functions/gibo.fish
     ~/.gitconfig: lib/git/.gitconfig
     ~/.tmux.conf: lib/tmux/.tmux.conf
     ~/.zprezto: submodules/prezto

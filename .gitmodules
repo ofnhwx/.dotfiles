@@ -5,6 +5,9 @@
 [submodule "submodules/anyenv-update"]
 	path = submodules/anyenv-update
 	url = https://github.com/znz/anyenv-update.git
+[submodule "submodules/gibo"]
+	path = submodules/gibo
+	url = https://github.com/simonwhitaker/gibo.git
 [submodule "submodules/prezto"]
 	path = submodules/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
