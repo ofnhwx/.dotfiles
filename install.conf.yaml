@@ -5,6 +5,7 @@
       force: true
 
 - link:
+    ~/.anyenv: submodules/anyenv
     ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
     ~/.config/fish/completions/docker-compose.fish: lib/fish/completions/docker-compose.fish
     ~/.config/fish/completions/docker.fish: lib/fish/completions/docker.fish
@@ -23,6 +24,8 @@
     ~/.gitconfig: lib/git/.gitconfig
     ~/.tmux.conf: lib/tmux/.tmux.conf
     ~/.zprezto: submodules/prezto
+    ~/bin/fzf: submodules/fzf/bin/fzf
+    ~/bin/gmi: submodules/lieer/gmi
 
 - shell:
     - [touch ~/.gitconfig.local]

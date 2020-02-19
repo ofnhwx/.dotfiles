@@ -2,12 +2,21 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "submodules/anyenv"]
+	path = submodules/anyenv
+	url = https://github.com/anyenv/anyenv.git
 [submodule "submodules/anyenv-update"]
 	path = submodules/anyenv-update
 	url = https://github.com/znz/anyenv-update.git
+[submodule "submodules/fzf"]
+	path = submodules/fzf
+	url = https://github.com/junegunn/fzf.git
 [submodule "submodules/gibo"]
 	path = submodules/gibo
 	url = https://github.com/simonwhitaker/gibo.git
+[submodule "submodules/lieer"]
+	path = submodules/lieer
+	url = https://github.com/gauteh/lieer.git
 [submodule "submodules/prezto"]
 	path = submodules/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
