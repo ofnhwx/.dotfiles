@@ -19,9 +19,11 @@
     ~/.config/fish/functions/gibo.fish: lib/fish/functions/gibo.fish
     ~/.config/fish/functions/idea.fish: lib/fish/functions/idea.fish
     ~/.config/fish/functions/mine.fish: lib/fish/functions/mine.fish
+    ~/.config/fish/functions/mutasync.fish: lib/mutagen/mutasync.fish
     ~/.config/fish/functions/pstorm.fish: lib/fish/functions/pstorm.fish
     ~/.config/fish/functions/rider.fish: lib/fish/functions/rider.fish
     ~/.gitconfig: lib/git/.gitconfig
+    ~/.mutagen.yml: lib/mutagen/.mutagen.yml
     ~/.tmux.conf: lib/tmux/.tmux.conf
     ~/.zprezto: submodules/prezto
     ~/bin/fzf: submodules/fzf/bin/fzf
