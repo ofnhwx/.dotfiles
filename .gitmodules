@@ -14,6 +14,9 @@
 [submodule "submodules/gibo"]
 	path = submodules/gibo
 	url = https://github.com/simonwhitaker/gibo.git
+[submodule "submodules/intellimacs"]
+	path = submodules/intellimacs
+	url = https://github.com/MarcoIeni/intellimacs
 [submodule "submodules/lieer"]
 	path = submodules/lieer
 	url = https://github.com/gauteh/lieer.git

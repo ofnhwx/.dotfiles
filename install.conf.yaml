@@ -23,6 +23,8 @@
     ~/.config/fish/functions/pstorm.fish: lib/fish/functions/pstorm.fish
     ~/.config/fish/functions/rider.fish: lib/fish/functions/rider.fish
     ~/.gitconfig: lib/git/.gitconfig
+    ~/.ideavimrc: lib/ideavim/.ideavimrc
+    ~/.intellimacs: submodules/intellimacs
     ~/.mutagen.yml: lib/mutagen/.mutagen.yml
     ~/.tmux.conf: lib/tmux/.tmux.conf
     ~/.zprezto: submodules/prezto
