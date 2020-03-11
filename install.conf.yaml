@@ -16,6 +16,7 @@
     ~/.config/fish/functions/e.fish: lib/fish/functions/e.fish
     ~/.config/fish/functions/emacs.fish: lib/fish/functions/emacs.fish
     ~/.config/fish/functions/fisher.fish: lib/fish/functions/fisher.fish
+    ~/.config/fish/functions/fzf_key_bindings.fish: submodules/fzf/shell/key-bindings.fish
     ~/.config/fish/functions/gibo.fish: lib/fish/functions/gibo.fish
     ~/.config/fish/functions/idea.fish: lib/fish/functions/idea.fish
     ~/.config/fish/functions/mine.fish: lib/fish/functions/mine.fish
