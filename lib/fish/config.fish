@@ -40,10 +40,9 @@ function fish_user_key_bindings
 end
 
 # WSL
-if uname -r | grep Microsoft > /dev/null
+if uname -r | grep -i microsoft > /dev/null
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
     export DefaultIMModule=fcitx
-    export DISPLAY=:0
 end
