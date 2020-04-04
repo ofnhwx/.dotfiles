@@ -45,4 +45,5 @@ if uname -r | grep -i microsoft > /dev/null
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
     export DefaultIMModule=fcitx
+    export DISPLAY=(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 end
