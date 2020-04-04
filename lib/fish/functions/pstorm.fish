@@ -1,3 +1,3 @@
 function pstorm
-    /usr/local/bin/pstorm $argv & disown
+    ~/bin/phpstorm $argv 2>/dev/null & disown
 end

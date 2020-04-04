@@ -1,3 +1,3 @@
 function mine
-    /usr/local/bin/mine $argv & disown
+    ~/bin/rubymine $argv 2>/dev/null & disown
 end

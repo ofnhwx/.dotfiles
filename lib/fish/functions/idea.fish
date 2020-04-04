@@ -1,3 +1,3 @@
 function idea
-    /usr/local/bin/idea $argv & disown
+    ~/bin/idea $argv 2>/dev/null & disown
 end

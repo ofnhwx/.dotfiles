@@ -1,3 +1,3 @@
 function rider
-    /usr/local/bin/rider $argv & disown
+    ~/bin/rider $argv 2>/dev/null & disown
 end

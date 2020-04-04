@@ -1,3 +1,3 @@
 function clion
-    /usr/local/bin/clion $argv & disown
+    ~/bin/clion $argv 2>/dev/null & disown
 end
