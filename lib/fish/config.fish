@@ -25,8 +25,10 @@ if status --is-interactive
 end
 
 # others
-test -d "$GOPATH"; and set PATH "$GOPATH/bin" $PATH
+set GOPATH "$HOME/go"
+set PATH "$GOPATH/bin" $PATH
 set PATH "$HOME/bin" $PATH
+set PATH "$HOME/.local/bin" $PATH
 
 # keybind
 function fish_user_key_bindings

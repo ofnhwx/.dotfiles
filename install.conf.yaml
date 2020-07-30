@@ -9,28 +9,11 @@
     ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
     ~/.config/fish/completions/docker-compose.fish: lib/fish/completions/docker-compose.fish
     ~/.config/fish/completions/docker.fish: lib/fish/completions/docker.fish
-    ~/.config/fish/completions/gibo.fish: submodules/gibo/shell-completions/gibo.fish
     ~/.config/fish/config.fish: lib/fish/config.fish
     ~/.config/fish/fishfile: lib/fish/fishfile
-    ~/.config/fish/functions/clion.fish: lib/fish/functions/clion.fish
-    ~/.config/fish/functions/e.fish: lib/fish/functions/e.fish
-    ~/.config/fish/functions/emacs.fish: lib/fish/functions/emacs.fish
     ~/.config/fish/functions/fisher.fish: lib/fish/functions/fisher.fish
-    ~/.config/fish/functions/fzf_key_bindings.fish: submodules/fzf/shell/key-bindings.fish
-    ~/.config/fish/functions/gibo.fish: lib/fish/functions/gibo.fish
-    ~/.config/fish/functions/idea.fish: lib/fish/functions/idea.fish
-    ~/.config/fish/functions/mine.fish: lib/fish/functions/mine.fish
-    ~/.config/fish/functions/mutasync.fish: lib/mutagen/mutasync.fish
-    ~/.config/fish/functions/pstorm.fish: lib/fish/functions/pstorm.fish
-    ~/.config/fish/functions/rider.fish: lib/fish/functions/rider.fish
+    ~/.config/fish/functions/toggl_report.fish: lib/fish/functions/toggl_report.fish
     ~/.gitconfig: lib/git/.gitconfig
-    ~/.ideavimrc: lib/ideavim/.ideavimrc
-    ~/.intellimacs: submodules/intellimacs
-    ~/.mutagen.yml: lib/mutagen/.mutagen.yml
-    ~/.tmux.conf: lib/tmux/.tmux.conf
-    ~/.zprezto: submodules/prezto
-    ~/bin/fzf: submodules/fzf/bin/fzf
-    ~/bin/gmi: submodules/lieer/gmi
 
 - shell:
     - [touch ~/.gitconfig.local]
