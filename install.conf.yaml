@@ -9,7 +9,7 @@
     ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
     ~/.config/fish/completions: lib/fish/completions
     ~/.config/fish/config.fish: lib/fish/config.fish
-    ~/.config/fish/fisher/fishfile: lib/fish/fisher/fishfile
+    ~/.config/fish/fishfile: lib/fish/fishfile
     ~/.config/fish/functions: lib/fish/functions
     ~/.gitconfig: lib/git/.gitconfig
 
