@@ -7,12 +7,10 @@
 - link:
     ~/.anyenv: submodules/anyenv
     ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
-    ~/.config/fish/completions/docker-compose.fish: lib/fish/completions/docker-compose.fish
-    ~/.config/fish/completions/docker.fish: lib/fish/completions/docker.fish
+    ~/.config/fish/completions: lib/fish/completions
     ~/.config/fish/config.fish: lib/fish/config.fish
-    ~/.config/fish/fishfile: lib/fish/fishfile
-    ~/.config/fish/functions/fisher.fish: lib/fish/functions/fisher.fish
-    ~/.config/fish/functions/toggl_report.fish: lib/fish/functions/toggl_report.fish
+    ~/.config/fish/fisher/fishfile: lib/fish/fisher/fishfile
+    ~/.config/fish/functions: lib/fish/functions
     ~/.gitconfig: lib/git/.gitconfig
 
 - shell:
