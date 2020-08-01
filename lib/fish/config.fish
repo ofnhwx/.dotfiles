@@ -46,6 +46,14 @@ if which go > /dev/null
 end
 
 # ================================================================
+# starship
+# ================================================================
+if which starship > /dev/null
+    # curl -fsSL https://starship.rs/install.sh | bash
+    starship init fish | source
+end
+
+# ================================================================
 # others
 # ================================================================
 set PATH "$HOME/bin" $PATH
