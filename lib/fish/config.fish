@@ -58,6 +58,7 @@ end
 # ================================================================
 set PATH "$HOME/bin" $PATH
 set PATH "$HOME/.local/bin" $PATH
+set -x FZF_DEFAULT_OPTS '--height=40% --layout=reverse-list --border'
 
 # ================================================================
 # WSL
