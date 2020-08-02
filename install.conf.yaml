@@ -12,6 +12,7 @@
     ~/.config/fish/fishfile: lib/fish/fishfile
     ~/.config/fish/functions: lib/fish/functions
     ~/.gitconfig: lib/git/.gitconfig
+    ~/.tmux/plugins/tpm: submodules/tpm
     ~/.tmux.conf: lib/tmux/.tmux.conf
 
 - shell:
