@@ -48,3 +48,10 @@ background_opacity: 0.98
 
 cursor:
   style: Beam
+
+shell:
+  program: /usr/bin/fish
+  args:
+    - --login
+    - --command
+    - "tmux attach 2>/dev/null; or tmux new"
