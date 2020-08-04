@@ -2,8 +2,9 @@
 # Last updated: <2017/12/01 17:11:28>
 
 # ================================================================
-# Locale
+# env
 # ================================================================
+# -- locales
 set -x LANG ja_JP.UTF-8
 set -x LC_COLLATE ja_JP.UTF-8
 set -x LC_CTYPE ja_JP.UTF-8
@@ -11,6 +12,14 @@ set -x LC_MESSAGES ja_JP.UTF-8
 set -x LC_MONETARY ja_JP.UTF-8
 set -x LC_NUMERIC ja_JP.UTF-8
 set -x LC_TIME ja_JP.UTF-8
+# -- paths
+set PATH "$HOME/bin" $PATH
+set PATH "$HOME/.local/bin" $PATH
+set PATH "$HOME/.cargo/bin" $PATH
+set GOPATH "$HOME/go"
+set PATH "$GOPATH/bin" $PATH
+# -- others
+set -x FZF_DEFAULT_OPTS '--height=40% --layout=reverse-list --border'
 
 # ================================================================
 # fisher
@@ -29,36 +38,22 @@ if not functions -q fisher
 end
 
 # ================================================================
-# anyenv
+# utilities
 # ================================================================
+# -- anyenv
 if status --is-interactive
     set PATH "$HOME/.anyenv/bin" $PATH
     source (anyenv init -|psub)
 end
-
-# ================================================================
-# Go
-# ================================================================
-if which go > /dev/null
-    set GOPATH "$HOME/go"
-    set PATH "$GOPATH/bin" $PATH
-    # go get github.com/x-motemen/ghq
-end
-
-# ================================================================
-# starship
-# ================================================================
+# -- starship
 if which starship > /dev/null
     # curl -fsSL https://starship.rs/install.sh | bash
     starship init fish | source
 end
-
-# ================================================================
-# others
-# ================================================================
-set PATH "$HOME/bin" $PATH
-set PATH "$HOME/.local/bin" $PATH
-set -x FZF_DEFAULT_OPTS '--height=40% --layout=reverse-list --border'
+# -- zoxide
+if which zoxide > /dev/null
+    zoxide init fish | source
+end
 
 # ================================================================
 # WSL
