@@ -54,4 +54,4 @@ shell:
   args:
     - --login
     - --command
-    - "tmux attach 2>/dev/null; or tmux new"
+    - "exec tmux new -A -s default"
