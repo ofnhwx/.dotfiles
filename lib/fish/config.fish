@@ -16,6 +16,7 @@ set -x LC_TIME ja_JP.UTF-8
 set PATH "$HOME/bin" $PATH
 set PATH "$HOME/.local/bin" $PATH
 set PATH "$HOME/.cargo/bin" $PATH
+set PATH "$HOME/.config/composer/vendor/bin" $PATH
 set GOPATH "$HOME/go"
 set PATH "$GOPATH/bin" $PATH
 # -- others
