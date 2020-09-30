@@ -13,7 +13,6 @@ set -x LC_MONETARY ja_JP.UTF-8
 set -x LC_NUMERIC ja_JP.UTF-8
 set -x LC_TIME ja_JP.UTF-8
 # -- paths
-set PATH "$HOME/bin" $PATH
 set PATH "$HOME/.local/bin" $PATH
 set PATH "$HOME/.cargo/bin" $PATH
 set PATH "$HOME/.config/composer/vendor/bin" $PATH
