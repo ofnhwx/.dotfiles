@@ -45,6 +45,10 @@ if status --is-interactive
     set PATH "$HOME/.anyenv/bin" $PATH
     source (anyenv init -|psub)
 end
+# -- direnv
+if which direnv > /dev/null
+    eval (direnv hook fish)
+end
 # -- starship
 if which starship > /dev/null
     # curl -fsSL https://starship.rs/install.sh | bash
