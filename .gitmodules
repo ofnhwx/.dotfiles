@@ -26,3 +26,6 @@
 [submodule "submodules/tpm"]
 	path = submodules/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "submodules/zinit"]
+	path = submodules/zinit
+	url = https://github.com/zdharma/zinit.git
