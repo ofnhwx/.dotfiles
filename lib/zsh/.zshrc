@@ -30,7 +30,13 @@ if [ $? = 0 ]; then
   export QT_IM_MODULE=fcitx
   export XMODIFIERS=@im=fcitx
   export DefaultIMModule=fcitx
+
   export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
+
+  if ! pgrep -f ssh-agent >/dev/null; then
+    ssh-agent -s > "$HOME/.ssh-agent.env"
+  fi
+  eval `cat "$HOME/.ssh-agent.env"` >/dev/null
 fi
 
 # ================================================================
@@ -38,7 +44,10 @@ fi
 # ================================================================
 
 # -- Zinit - https://github.com/zdharma/zinit
-source ~/.zinit/bin/zinit.zsh
+source "$HOME/.zinit/bin/zinit.zsh"
+unalias zi
+
+zinit snippet PZT::modules/history/init.zsh
 
 zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
