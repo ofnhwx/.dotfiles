@@ -53,6 +53,8 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
 # ================================================================
 # utilities
 # ================================================================

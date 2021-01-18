@@ -50,8 +50,13 @@ cursor:
   style: Beam
 
 shell:
-  program: /usr/bin/fish
+  # program: /usr/bin/fish
+  # args:
+  #   - --login
+  #   - --command
+  #   - "exec tmux new -A -s default"
+  program: /usr/bin/zsh
   args:
     - --login
-    - --command
+    - -c
     - "exec tmux new -A -s default"

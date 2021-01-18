@@ -67,9 +67,9 @@ if uname -r | grep -i microsoft > /dev/null
     export XMODIFIERS=@im=fcitx
     export DefaultIMModule=fcitx
     export DISPLAY=(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-end
 
-if not pgrep -f ssh-agent
-    ssh-agent -c > "$HOME/.ssh-agent.env"
+    if not pgrep -f ssh-agent
+        ssh-agent -c > "$HOME/.ssh-agent.env"
+    end
+    eval (cat "$HOME/.ssh-agent.env") > /dev/null
 end
-eval (cat "$HOME/.ssh-agent.env") > /dev/null
