@@ -5,8 +5,7 @@
       force: true
 
 - link:
-    ~/.anyenv: submodules/anyenv
-    ~/.anyenv/plugins/anyenv-update: submodules/anyenv-update
+    ~/.asdf: submodules/asdf
     ~/.config/alacritty: lib/alacritty
     ~/.config/fish/completions: lib/fish/completions
     ~/.config/fish/config.fish: lib/fish/config.fish

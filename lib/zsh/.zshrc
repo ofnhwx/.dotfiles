@@ -59,11 +59,8 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 # utilities
 # ================================================================
 
-# -- anyenv - https://github.com/anyenv/anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-if (( $+commands[anyenv] )); then
-  eval "$(anyenv init -)"
-fi
+# -- asdf - https://github.com/asdf-vm/asdf
+. $HOME/.asdf/asdf.sh
 
 # -- Starship - https://starship.rs/
 if (( $+commands[starship] )); then
