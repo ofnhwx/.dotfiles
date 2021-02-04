@@ -71,3 +71,20 @@ fi
 if (( $+commands[zoxide] )); then
   eval "$(zoxide init zsh)"
 fi
+
+# ================================================================
+# custom
+# ================================================================
+
+alias ll=lsd
+
+function __fzf-ghq() {
+  local src=$(ghq list | fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
+    zle accept-line
+  fi
+  zle redisplay
+}
+zle -N __fzf-ghq
+bindkey '^]' __fzf-ghq
