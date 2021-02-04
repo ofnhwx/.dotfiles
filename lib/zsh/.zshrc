@@ -4,6 +4,9 @@
 # env
 # ================================================================
 
+# -- options
+setopt no_beep
+
 # -- locales
 export LANG=ja_JP.UTF-8
 export LC_COLLATE=ja_JP.UTF-8
@@ -21,7 +24,7 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # -- others
-export FZF_DEFAULT_OPTS='--height=40% --layout=reverse-list --border'
+export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
 
 # -- WSL
 uname -r | grep -i microsoft >/dev/null
@@ -52,6 +55,7 @@ zinit snippet PZT::modules/history/init.zsh
 zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
