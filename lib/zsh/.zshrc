@@ -53,6 +53,7 @@ unalias zi
 
 zinit snippet PZT::modules/history/init.zsh
 
+zinit light asdf-vm/asdf
 zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
@@ -63,9 +64,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 # ================================================================
 # utilities
 # ================================================================
-
-# -- asdf - https://github.com/asdf-vm/asdf
-. $HOME/.asdf/asdf.sh
 
 # -- Starship - https://starship.rs/
 if (( $+commands[starship] )); then
