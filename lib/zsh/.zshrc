@@ -6,6 +6,7 @@
 
 # -- options
 setopt no_beep
+setopt hist_ignore_space
 
 # -- locales
 export LANG=ja_JP.UTF-8
