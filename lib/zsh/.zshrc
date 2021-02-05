@@ -58,6 +58,7 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light Tarrasch/zsh-bd
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
