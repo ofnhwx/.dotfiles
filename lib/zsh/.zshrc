@@ -80,7 +80,7 @@ fi
 # custom
 # ================================================================
 
-alias ll=lsd
+alias ll="lsd -l"
 
 function __fzf-ghq() {
   local src=$(ghq list | fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
