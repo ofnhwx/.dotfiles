@@ -54,6 +54,7 @@ unalias zi
 zinit snippet PZT::modules/history/init.zsh
 
 zinit light asdf-vm/asdf
+zinit light wfxr/forgit
 zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
