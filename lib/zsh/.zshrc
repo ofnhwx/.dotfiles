@@ -53,13 +53,15 @@ unalias zi
 
 zinit snippet PZT::modules/history/init.zsh
 
-zinit light asdf-vm/asdf
-zinit light wfxr/forgit
-zinit light zdharma/fast-syntax-highlighting
-zinit light zdharma/history-search-multi-word
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit light Tarrasch/zsh-bd
+zinit wait lucid light-mode for \
+  aloxaf/fzf-tab \
+  asdf-vm/asdf \
+  tarrasch/zsh-bd \
+  wfxr/forgit \
+  zdharma/history-search-multi-word \
+  atinit"zicompinit; zicdreplay" zdharma/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
+  blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
