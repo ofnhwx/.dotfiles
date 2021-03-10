@@ -60,3 +60,10 @@ shell:
     - --login
     - -c
     - "exec tmux new -A -s default"
+  # program: C:\Windows\System32\wsl.exe
+  # args:
+  #   - "~"
+  #   - -d
+  #   - ubuntu
+  #   - -e
+  #   - "tmux new -A -s default"
