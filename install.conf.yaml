@@ -5,7 +5,6 @@
       force: true
 
 - link:
-    ~/.asdf: submodules/asdf
     ~/.config/alacritty: lib/alacritty
     ~/.config/fish/completions: lib/fish/completions
     ~/.config/fish/config.fish: lib/fish/config.fish
