@@ -70,14 +70,19 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 # utilities
 # ================================================================
 
-# -- Starship - https://starship.rs/
+# -- Starship :: https://starship.rs/
 if (( $+commands[starship] )); then
   eval "$(starship init zsh)"
 fi
 
-# -- Zoxide - https://github.com/ajeetdsouza/zoxide
+# -- Zoxide :: https://github.com/ajeetdsouza/zoxide
 if (( $+commands[zoxide] )); then
   eval "$(zoxide init zsh)"
+fi
+
+# -- direnv :: https://direnv.net/
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook zsh)"
 fi
 
 # ================================================================
