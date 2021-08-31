@@ -1,10 +1,9 @@
 [include]
-	path = .gitconfig.local
+	path = config.local
 [color]
 	ui = auto
 [core]
 	editor = vim -c \"set fenc=utf-8\"
-	excludesfile = ~/.gitignore.global
 [diff "cp932"]
 	textconv = iconv -f cp932
 [diff "sjis"]
