@@ -18,11 +18,14 @@ export LC_NUMERIC=ja_JP.UTF-8
 export LC_TIME=ja_JP.UTF-8
 
 # -- paths
+export GOPATH="$HOME/go"
+export VOLTA_HOME="$HOME/.volta"
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # -- others
 export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
@@ -88,6 +91,8 @@ fi
 # ================================================================
 # custom
 # ================================================================
+
+source "$HOME/.dotfiles/lib/zsh/emacs-vterm-zsh.sh"
 
 alias ll="lsd -l"
 

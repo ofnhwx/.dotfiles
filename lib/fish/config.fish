@@ -14,11 +14,14 @@ set -x LC_NUMERIC ja_JP.UTF-8
 set -x LC_TIME ja_JP.UTF-8
 
 # -- paths
+set GOPATH "$HOME/go"
+set VOLTA_HOME "$HOME/.volta"
+
 set PATH "$HOME/.local/bin" $PATH
 set PATH "$HOME/.cargo/bin" $PATH
 set PATH "$HOME/.config/composer/vendor/bin" $PATH
-set GOPATH "$HOME/go"
 set PATH "$GOPATH/bin" $PATH
+set PATH "$VOLTA_HOME/bin" $PATH
 
 # -- others
 set -x FZF_DEFAULT_OPTS '--height=40% --layout=reverse-list --border'

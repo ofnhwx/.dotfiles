@@ -5,6 +5,10 @@ window:
   dimensions:
     columns: 132
     lines: 43
+  padding:
+    x: 8
+    y: 8
+  opacity: 0.9
 
 font:
   normal:
@@ -65,8 +69,6 @@ colors:
 #     magenta: '0x6c71c4'
 #     cyan:    '0x93a1a1'
 #     white:   '0xfdf6e3'
-
-background_opacity: 0.98
 
 cursor:
   style: Beam
