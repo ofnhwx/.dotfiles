@@ -19,7 +19,6 @@ set VOLTA_HOME "$HOME/.volta"
 
 set PATH "$HOME/.local/bin" $PATH
 set PATH "$HOME/.cargo/bin" $PATH
-set PATH "$HOME/.config/composer/vendor/bin" $PATH
 set PATH "$GOPATH/bin" $PATH
 set PATH "$VOLTA_HOME/bin" $PATH
 

@@ -23,7 +23,6 @@ export VOLTA_HOME="$HOME/.volta"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
