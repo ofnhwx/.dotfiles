@@ -50,8 +50,7 @@ fi
 # ================================================================
 
 # -- Zinit - https://github.com/zdharma/zinit
-source "$HOME/.zinit/bin/zinit.zsh"
-unalias zi
+source "$HOME/.zinit/bin/zi.zsh"
 
 zinit snippet PZT::modules/history/init.zsh
 

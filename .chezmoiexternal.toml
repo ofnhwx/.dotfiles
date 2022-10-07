@@ -1,0 +1,8 @@
+[".tmux/plugins/tpm"]
+  type = "git-repo"
+  url = "https://github.com/tmux-plugins/tpm.git"
+  refreshPeriod = "168h"
+[".zinit/bin"]
+  type = "git-repo"
+  url = "https://github.com/z-shell/zi"
+  refreshPeriod = "168h"

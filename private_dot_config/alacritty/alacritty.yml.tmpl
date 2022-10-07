@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: Cica
     style: Bold Italic
-  size: 13.0
+  size: {{ if (eq .chezmoi.os "darwin") }}18.0{{ else }}13.0{{ end }}
 
 colors:
   primary:
@@ -79,7 +79,7 @@ shell:
   #   - --login
   #   - --command
   #   - "exec tmux new -A -s default"
-  program: /usr/bin/zsh
+  program: {{ if (ne .chezmoi.os "darwin") }}/usr{{ end }}/bin/zsh
   args:
     - --login
     - -c
