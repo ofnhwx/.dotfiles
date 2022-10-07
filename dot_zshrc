@@ -90,7 +90,7 @@ fi
 # custom
 # ================================================================
 
-source "$HOME/.dotfiles/lib/zsh/emacs-vterm-zsh.sh"
+source "$HOME/.zinit/emacs-vterm-zsh.sh"
 
 alias ll="lsd -l"
 

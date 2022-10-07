@@ -6,3 +6,7 @@
   type = "git-repo"
   url = "https://github.com/z-shell/zi"
   refreshPeriod = "168h"
+[".zinit/emacs-vterm-zsh.sh"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/akermu/emacs-libvterm/master/etc/emacs-vterm-zsh.sh"
+  refreshPeriod = "168h"
