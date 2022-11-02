@@ -1,3 +1,7 @@
+[".hammerspoon/stackline"]
+  type = "git-repo"
+  url = "https://github.com/AdamWagner/stackline.git"
+  refreshPeriod = "168h"
 [".tmux/plugins/tpm"]
   type = "git-repo"
   url = "https://github.com/tmux-plugins/tpm.git"
