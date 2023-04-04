@@ -28,6 +28,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # -- others
 export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
+export LSP_USE_PLISTS=true
 
 # -- WSL
 uname -r | grep -i microsoft >/dev/null
@@ -64,8 +65,6 @@ zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" zdharma/fast-syntax-highlighting \
   atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
   blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
-
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # ================================================================
 # utilities
