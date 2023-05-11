@@ -1,0 +1,7 @@
+#!/bin/bash
+gitleaks protect --staged --verbose --config="$HOME/.config/git/gitleaks.toml"
+STATUS=$?
+if [ $STATUS -ne 0 ]; then
+    exit $STATUS
+fi
+source `dirname ${0}`/_run-local-hook

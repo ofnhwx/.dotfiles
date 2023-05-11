@@ -1,9 +1,12 @@
-[include]
-	path = config.local
 [color]
 	ui = auto
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	hooksPath = ~/.config/git/hooks
+[forge]
+	omitExpensive = true
+[ghq]
+	root = ~/src
 [diff "cp932"]
 	textconv = iconv -f cp932
 [diff "sjis"]
@@ -16,3 +19,5 @@
 [diff "mincss"]
 	textconv = js-beautify --css
 	cachetextconv = true
+[include]
+	path = config.local
