@@ -1,7 +1,9 @@
+{{ if eq .chezmoi.os "darwin" -}}
 [".hammerspoon/stackline"]
   type = "git-repo"
   url = "https://github.com/AdamWagner/stackline.git"
   refreshPeriod = "168h"
+{{- end }}
 [".tmux/plugins/tpm"]
   type = "git-repo"
   url = "https://github.com/tmux-plugins/tpm.git"
