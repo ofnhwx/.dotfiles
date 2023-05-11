@@ -70,6 +70,11 @@ zinit wait lucid light-mode for \
 # utilities
 # ================================================================
 
+# -- Heroku
+if (( $+commands[heroku] )); then
+  eval "$(heroku autocomplete:script zsh)"
+fi
+
 # -- Starship :: https://starship.rs/
 if (( $+commands[starship] )); then
   eval "$(starship init zsh)"
