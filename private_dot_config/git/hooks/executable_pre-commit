@@ -4,4 +4,3 @@ STATUS=$?
 if [ $STATUS -ne 0 ]; then
     exit $STATUS
 fi
-source `dirname ${0}`/_run-local-hook
