@@ -29,6 +29,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # -- others
 export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
 export LSP_USE_PLISTS=true
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
 # -- WSL
 uname -r | grep -i microsoft >/dev/null
@@ -89,6 +90,10 @@ fi
 if (( $+commands[direnv] )); then
   eval "$(direnv hook zsh)"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ================================================================
 # custom
