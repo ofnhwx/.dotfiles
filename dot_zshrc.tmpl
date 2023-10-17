@@ -31,21 +31,21 @@ export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
 export LSP_USE_PLISTS=true
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
+{{- if (eq .chezmoi.os "linux") -}}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
 # -- WSL
-uname -r | grep -i microsoft >/dev/null
-if [ $? = 0 ]; then
-  export GTK_IM_MODULE=fcitx
-  export QT_IM_MODULE=fcitx
-  export XMODIFIERS=@im=fcitx
-  export DefaultIMModule=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
+export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
 
-  export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
-
-  if ! pgrep -f ssh-agent >/dev/null; then
-    ssh-agent -s > "$HOME/.ssh-agent.env"
-  fi
-  eval `cat "$HOME/.ssh-agent.env"` >/dev/null
+if ! pgrep -f ssh-agent >/dev/null; then
+  ssh-agent -s > "$HOME/.ssh-agent.env"
 fi
+eval `cat "$HOME/.ssh-agent.env"` >/dev/null
+{{-   end }}
+{{- end }}
 
 # ================================================================
 # Zinit
@@ -73,7 +73,8 @@ zinit wait lucid light-mode for \
 
 # -- Heroku
 if (( $+commands[heroku] )); then
-  eval "$(heroku autocomplete:script zsh)"
+  # eval "$(heroku autocomplete:script zsh)"
+  HEROKU_AC_ZSH_SETUP_PATH=/home/ofnhwx/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 fi
 
 # -- Starship :: https://starship.rs/
@@ -99,8 +100,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # custom
 # ================================================================
 
-source "$HOME/.zinit/emacs-vterm-zsh.sh"
-
+bindkey -e
 alias ll="lsd -l"
 
 function __fzf-ghq() {
