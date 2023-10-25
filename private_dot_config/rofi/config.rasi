@@ -1,0 +1,9 @@
+@theme "solarized_alternate"
+configuration {
+  font: "Cica 12";
+  show-icons: true;
+  sidebar-mode: true;
+}
+window {
+  width: 768px;
+}
