@@ -32,6 +32,13 @@ exec --no-startup-id picom -b
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --blur 50
 exec --no-startup-id $HOME/.config/i3/wallpaper.sh
 
+# mark
+for_window [class="Alacritty"] mark a
+for_window [class="Google-chrome"] mark c
+for_window [class="Emacs.*"] mark e
+for_window [class="firefox"] mark f
+for_window [class="Slack"] mark s
+
 # floating
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Pavucontrol"] floating enable
