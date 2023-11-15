@@ -16,6 +16,8 @@ no_focus [window_role=".*"]
 set $mod Mod4
 show_marks yes
 
+exec --no-startup-id xinput set-prop "ELAN0678:00 04F3:3195 Touchpad" "libinput Tapping Enabled" 1
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 tiling_drag modifier titlebar
