@@ -60,7 +60,7 @@ source "$HOME/.zinit/bin/zi.zsh"
 zinit snippet PZT::modules/history/init.zsh
 
 zinit light aloxaf/fzf-tab
-zinit light asdf-vm/asdf
+# zinit light asdf-vm/asdf
 zinit light tarrasch/zsh-bd
 zinit light wfxr/forgit
 zinit light zdharma/history-search-multi-word
@@ -93,6 +93,11 @@ fi
 # -- direnv :: https://direnv.net/
 if (( $+commands[direnv] )); then
   eval "$(direnv hook zsh)"
+fi
+
+# -- rtx :: https://github.com/jdx/rtx
+if (( $+commands[rtx] )); then
+  eval "$(rtx activate zsh)"
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
