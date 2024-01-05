@@ -1,0 +1,60 @@
+[colors.bright]
+black = "0x595959"
+blue = "0x2fafff"
+cyan = "0x00d3d0"
+green = "0x44bc44"
+magenta = "0xfeacd0"
+red = "0xff8059"
+white = "0xa6a6a6"
+yellow = "0xe0cc00"
+
+[colors.normal]
+black = "0x595959"
+blue = "0x2fafff"
+cyan = "0x00d3d0"
+green = "0x44bc44"
+magenta = "0xfeacd0"
+red = "0xff8059"
+white = "0xa6a6a6"
+yellow = "0xe0cc00"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xffffff"
+
+[cursor]
+style = "Beam"
+
+[font]
+size: {{ if (eq .chezmoi.os "darwin") }}18.0{{ else }}13.0{{ end }}
+
+[font.bold]
+family = "UDEV Gothic NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "UDEV Gothic NF"
+style = "Bold Italic"
+
+[font.italic]
+family = "UDEV Gothic NF"
+style = "Italic"
+
+[font.normal]
+family = "UDEV Gothic NF"
+style = "Regular"
+
+[shell]
+args = ["--login", "-c", "exec tmux new -A -s default"]
+program = "/usr/bin/zsh"
+
+[window]
+opacity = 0.9
+
+[window.dimensions]
+columns = 132
+lines = 43
+
+[window.padding]
+x = 8
+y = 8
