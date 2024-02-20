@@ -26,7 +26,7 @@ foreground = "0xffffff"
 style = "Beam"
 
 [font]
-size: {{ if (eq .chezmoi.os "darwin") }}18.0{{ else }}13.0{{ end }}
+size = {{ if (eq .chezmoi.os "darwin") }}18.0{{ else }}13.0{{ end }}
 
 [font.bold]
 family = "UDEV Gothic NF"
@@ -45,6 +45,7 @@ family = "UDEV Gothic NF"
 style = "Regular"
 
 [shell]
+# args = ["--login", "-c", "exec zellij attach -c default"]
 args = ["--login", "-c", "exec tmux new -A -s default"]
 program = "/usr/bin/zsh"
 
