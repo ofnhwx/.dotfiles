@@ -91,7 +91,7 @@ fi
 
 # -- mise :: https://github.com/jdx/mise
 if (( $+commands[mise] )); then
-  eval "$(mise activate zsh)"
+  eval "$(mise activate zsh --shims)"
   eval "$(mise completion zsh)"
 fi
 
