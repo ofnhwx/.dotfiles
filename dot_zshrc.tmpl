@@ -59,25 +59,16 @@ source "$HOME/.zinit/bin/zi.zsh"
 
 zinit snippet PZT::modules/history/init.zsh
 
-zinit light aloxaf/fzf-tab
-zinit light tarrasch/zsh-bd
-zinit light wfxr/forgit
+zinit light Aloxaf/fzf-tab
+zinit light Tarrasch/zsh-bd
 
 zinit ice depth"1" blockf
 zinit light yuki-yano/zeno.zsh
-if [[ -n $ZENO_LOADED ]]; then
-  bindkey ' '  zeno-auto-snippet
-  bindkey '^]' zeno-ghq-cd
-  bindkey '^i' zeno-completion
-  bindkey '^m' zeno-auto-snippet-and-accept-line
-  bindkey '^r' zeno-history-selection
-  bindkey '^x' zeno-insert-snippet
-fi
 
 zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" zdharma/fast-syntax-highlighting \
-  atload"_zsh_autosuggest_start" zsh-users/zsh-autosuggestions \
-  blockf atpull"zinit creinstall -q ." zsh-users/zsh-completions
+  atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" z-shell/F-Sy-H \
+  blockf zsh-users/zsh-completions \
+  atload"!_zsh_autosuggest_start" zsh-users/zsh-autosuggestions
 
 # ================================================================
 # utilities
@@ -114,3 +105,14 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # ================================================================
 
 alias ll="lsd -l"
+
+if [[ -n $ZENO_LOADED ]]; then
+  export ZENO_COMPLETION_FALLBACK=fzf-tab-complete
+
+  bindkey ' '  zeno-auto-snippet
+  bindkey '^]' zeno-ghq-cd
+  bindkey '^i' zeno-completion
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+  bindkey '^r' zeno-history-selection
+  bindkey '^x' zeno-insert-snippet
+fi
