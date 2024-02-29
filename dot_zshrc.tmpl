@@ -62,7 +62,17 @@ zinit snippet PZT::modules/history/init.zsh
 zinit light aloxaf/fzf-tab
 zinit light tarrasch/zsh-bd
 zinit light wfxr/forgit
-zinit light zdharma/history-search-multi-word
+
+zinit ice depth"1" blockf
+zinit light yuki-yano/zeno.zsh
+if [[ -n $ZENO_LOADED ]]; then
+  bindkey ' '  zeno-auto-snippet
+  bindkey '^]' zeno-ghq-cd
+  bindkey '^i' zeno-completion
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+  bindkey '^r' zeno-history-selection
+  bindkey '^x' zeno-insert-snippet
+fi
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" zdharma/fast-syntax-highlighting \
@@ -86,7 +96,7 @@ fi
 
 # -- Zoxide :: https://github.com/ajeetdsouza/zoxide
 if (( $+commands[zoxide] )); then
-  eval "$(zoxide init zsh)"
+  eval "$(zoxide init zsh --cmd j)"
 fi
 
 # -- mise :: https://github.com/jdx/mise
@@ -104,14 +114,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # ================================================================
 
 alias ll="lsd -l"
-
-function __fzf-ghq() {
-  local src=$(ghq list | fzf --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
-  if [ -n "$src" ]; then
-    BUFFER="cd $(ghq root)/$src"
-    zle accept-line
-  fi
-  zle redisplay
-}
-zle -N __fzf-ghq
-bindkey '^]' __fzf-ghq
