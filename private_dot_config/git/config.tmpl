@@ -3,6 +3,8 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	hooksPath = {{ .chezmoi.homeDir }}/.config/git/hooks
+[merge]
+	conflictStyle = zdiff3
 [forge]
 	omitExpensive = true
 [ghq]
