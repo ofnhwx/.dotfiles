@@ -34,8 +34,8 @@ export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
 export LSP_USE_PLISTS=true
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
-{{- if (eq .chezmoi.os "linux") -}}
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") -}}
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) }}
+
 # -- WSL
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -47,26 +47,33 @@ if ! pgrep -f ssh-agent >/dev/null; then
   ssh-agent -s > "$HOME/.ssh-agent.env"
 fi
 eval `cat "$HOME/.ssh-agent.env"` >/dev/null
-{{-   end }}
 {{- end }}
 
 # ================================================================
 # Zinit
 # ================================================================
 
-# -- Zinit - https://github.com/zdharma/zinit
-source "$HOME/.zinit/bin/zi.zsh"
+function init-zeno() {
+  export ZENO_COMPLETION_FALLBACK=fzf-tab-complete
+
+  bindkey ' '  zeno-auto-snippet
+  bindkey '^]' zeno-ghq-cd
+  bindkey '^i' zeno-completion
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+  bindkey '^r' zeno-history-selection
+  bindkey '^x' zeno-insert-snippet
+}
+
+# -- Zinit - https://github.com/zdharma-continuum/zinit
+source "$HOME/.zinit/bin/zinit.zsh"
 
 zinit snippet PZT::modules/history/init.zsh
-
 zinit light Aloxaf/fzf-tab
 zinit light Tarrasch/zsh-bd
 
-zinit ice depth"1" blockf
-zinit light yuki-yano/zeno.zsh
-
 zinit wait lucid light-mode for \
-  atinit"ZI[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" z-shell/F-Sy-H \
+  atload"init-zeno" depth"1" blockf  yuki-yano/zeno.zsh \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" z-shell/F-Sy-H \
   blockf zsh-users/zsh-completions \
   atload"!_zsh_autosuggest_start" zsh-users/zsh-autosuggestions
 
@@ -76,8 +83,9 @@ zinit wait lucid light-mode for \
 
 # -- Heroku
 if (( $+commands[heroku] )); then
-  # eval "$(heroku autocomplete:script zsh)"
-  HEROKU_AC_ZSH_SETUP_PATH=/home/ofnhwx/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+  # echo "$(heroku autocomplete:script zsh)"
+  HEROKU_AC_ZSH_SETUP_PATH=$HOME/.cache/heroku/autocomplete/zsh_setup
+  test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 fi
 
 # -- Starship :: https://starship.rs/
@@ -96,9 +104,9 @@ if (( $+commands[mise] )); then
   eval "$(mise completion zsh)"
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ================================================================
 # custom
@@ -106,14 +114,3 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 alias e="emacs & disown"
 alias ll="lsd -l"
-
-if [[ -n $ZENO_LOADED ]]; then
-  export ZENO_COMPLETION_FALLBACK=fzf-tab-complete
-
-  bindkey ' '  zeno-auto-snippet
-  bindkey '^]' zeno-ghq-cd
-  bindkey '^i' zeno-completion
-  bindkey '^m' zeno-auto-snippet-and-accept-line
-  bindkey '^r' zeno-history-selection
-  bindkey '^x' zeno-insert-snippet
-fi
