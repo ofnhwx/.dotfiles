@@ -34,6 +34,9 @@ exec --no-startup-id picom -b
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --blur 50
 exec --no-startup-id $HOME/.config/i3/wallpaper.sh
 
+exec --no-startup-id dropbox
+exec --no-startup-id pcloud
+
 # mark
 for_window [class="Alacritty"] mark a
 for_window [class="Google-chrome"] mark c
