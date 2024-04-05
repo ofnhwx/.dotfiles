@@ -24,18 +24,11 @@ tiling_drag modifier titlebar
 
 # start applications
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id autorandr --change
-exec --no-startup-id blueberry-tray
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dunst
 exec --no-startup-id greenclip daemon
-exec --no-startup-id nm-applet
-exec --no-startup-id picom -b
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --blur 50
 exec --no-startup-id $HOME/.config/i3/wallpaper.sh
-
-exec --no-startup-id dropbox
-exec --no-startup-id pcloud
 
 # mark
 for_window [class="Alacritty"] mark a
