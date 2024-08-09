@@ -27,6 +27,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id dunst
 exec --no-startup-id greenclip daemon
+exec --no-startup-id pueued -d
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockr --blur 50
 exec --no-startup-id $HOME/.config/i3/wallpaper.sh
 
