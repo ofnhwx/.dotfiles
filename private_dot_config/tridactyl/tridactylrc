@@ -1,3 +1,4 @@
+set allowautofocus true
 set smoothscroll true
 
-autocmd DocStart ^https://www.sonicgarden.world/ mode ignore
+autocmd DocStart ^https://www.sonicgarden.world/ unbind --mode=normal a
