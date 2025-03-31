@@ -1,2 +1,2 @@
 #!/bin/sh
-$HOME/.config/i3/wallpaper.sh
+$HOME/.config/i3/scripts/wallpaper

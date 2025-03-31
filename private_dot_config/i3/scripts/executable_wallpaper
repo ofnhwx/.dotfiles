@@ -1,0 +1,3 @@
+#!/bin/sh
+WALLPAPER=$HOME/.config/i3/scripts/wallpaper.png
+feh --bg-fill $WALLPAPER
