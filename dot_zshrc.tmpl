@@ -67,6 +67,10 @@ function init-zeno() {
 # -- Zinit - https://github.com/zdharma-continuum/zinit
 source "$HOME/.zinit/bin/zinit.zsh"
 
+# Initialize completion system
+autoload -Uz compinit
+compinit
+
 zinit snippet PZT::modules/history/init.zsh
 zinit light Aloxaf/fzf-tab
 zinit light Tarrasch/zsh-bd
