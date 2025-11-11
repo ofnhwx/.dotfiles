@@ -9,10 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+focus_on_window_activation urgent
 focus_wrapping no
 font pango:UDEV Gothic NF 12
 gaps inner 8
-no_focus [window_role=".*"]
+# no_focus [class=".*"]
 set $mod Mod4
 show_marks yes
 

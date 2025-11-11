@@ -33,10 +33,11 @@ set -ag terminal-overrides ',*:U8=0'
 set -gs default-terminal "screen-256color"
 set -gsa terminal-overrides ",xterm-256color:Tc"
 
-{{ if (eq .chezmoi.os "linux") -}}
 # Clipboard
-set -s copy-command 'xsel --input'
-bind ] run 'tmux set-buffer "$(xsel --output)"; tmux paste-buffer'
+set -s set-clipboard on
+set -as terminal-features ',*:clipboard'
+{{ if (eq .chezmoi.os "linux") -}}
+bind ] run 'tmux set-buffer "$(xsel --output 2>/dev/null)"; tmux paste-buffer'
 {{- end }}
 
 ################ キーバインド ################
