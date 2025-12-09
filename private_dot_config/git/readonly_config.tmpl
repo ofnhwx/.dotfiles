@@ -1,14 +1,18 @@
 [color]
 	ui = auto
+[commit]
+	gpgsign = true
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	hooksPath = {{ .chezmoi.homeDir }}/.config/git/hooks
-[merge]
-	conflictStyle = zdiff3
 [forge]
 	omitExpensive = true
 [ghq]
 	root = {{ .chezmoi.homeDir }}/src
+[gpg]
+	format = ssh
+[merge]
+	conflictStyle = zdiff3
 [diff "cp932"]
 	textconv = iconv -f cp932
 [diff "sjis"]
