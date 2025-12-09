@@ -26,7 +26,8 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # -- others
 export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
 export LSP_USE_PLISTS=true
-eval $(keychain --eval --quiet ~/.ssh/conf.d/keys/default/id_ed25519)
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+# eval $(keychain --eval --quiet ~/.ssh/conf.d/keys/default/id_ed25519)
 
 {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) }}
 

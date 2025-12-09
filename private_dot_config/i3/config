@@ -41,6 +41,7 @@ for_window [class="Slack"] mark s
 for_window [class="zen"] mark z
 
 # floating
+for_window [class="Bitwarden"] floating enable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="zoom"] floating enable
