@@ -5,6 +5,7 @@ set -euCo pipefail
 # declare -r LOCK="i3lockr --blur 50 && sleep 1"
 declare -r LOCK="loginctl lock-session $XDG_SESSION_ID && sleep 1"
 declare -Ar menu=(
+  ["Display Off"]="xset dpms force off"
   ["Lock"]="$LOCK"
   ["Logout"]="i3-msg exit"
   ["Suspend"]="$LOCK && systemctl suspend"

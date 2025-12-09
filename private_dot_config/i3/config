@@ -38,6 +38,7 @@ for_window [class="Google-chrome"] mark c
 for_window [class="Emacs.*"] mark e
 for_window [class="firefox"] mark f
 for_window [class="Slack"] mark s
+for_window [class="zen"] mark z
 
 # floating
 for_window [class="Blueberry.py"] floating enable
