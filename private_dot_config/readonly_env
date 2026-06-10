@@ -1,0 +1,12 @@
+# -*- mode: shell-script; coding: utf-8 -*-
+
+# -- locales
+LANG=ja_JP.UTF-8
+
+# -- paths
+GOPATH="$HOME/go"
+PATH="$HOME/.local/bin:$HOME/.cargo/bin:$GOPATH/bin:$PATH"
+
+# -- others
+FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
+LSP_USE_PLISTS=true

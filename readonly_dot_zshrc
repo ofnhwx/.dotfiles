@@ -4,6 +4,10 @@
 # env
 # ================================================================
 
+set -a
+source "$HOME/.config/env"
+set +a
+
 # -- emacs keybind
 bindkey -e
 
@@ -11,40 +15,10 @@ bindkey -e
 setopt no_beep
 setopt hist_ignore_space
 
-# -- locales
-export LANG=ja_JP.UTF-8
-
-# -- paths
-export GOPATH="$HOME/go"
-export VOLTA_HOME="$HOME/.volta"
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-# -- others
-export FZF_DEFAULT_OPTS='--height=60% --layout=reverse-list --border'
-export LSP_USE_PLISTS=true
+# -- ssh
 if [[ -z "$SSH_AUTH_SOCK" ]]; then
   export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 fi
-# eval $(keychain --eval --quiet ~/.ssh/conf.d/keys/default/id_ed25519)
-
-{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) }}
-
-# -- WSL
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export DefaultIMModule=fcitx
-export DISPLAY="$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0"
-
-if ! pgrep -f ssh-agent >/dev/null; then
-  ssh-agent -s > "$HOME/.ssh-agent.env"
-fi
-eval `cat "$HOME/.ssh-agent.env"` >/dev/null
-{{- end }}
 
 # ================================================================
 # Zinit
@@ -105,17 +79,20 @@ if (( $+commands[mise] )); then
   eval "$(mise completion zsh)"
 fi
 
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# -- git-wt :: https://github.com/k1LoW/git-wt
+if (( $+commands[git-wt] )); then
+  eval "$(git wt --init zsh)"
+fi
 
 # ================================================================
 # custom
 # ================================================================
 
 alias e="emacs & disown"
+alias enw="wezterm start --always-new-process -- emacs -nw & disown"
 alias doom="$HOME/.config/doomemacs/bin/doom"
 alias doomemacs="emacs --init-directory $HOME/.config/doomemacs & disown"
 alias spacemacs="emacs --init-directory $HOME/.config/spacemacs & disown"
+alias filen='filen-cli --skip-update'
 alias ll="lsd -l"
 alias npx="pnpm dlx"

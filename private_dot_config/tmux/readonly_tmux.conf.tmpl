@@ -42,6 +42,10 @@ bind ] run 'tmux set-buffer "$(xsel --output 2>/dev/null)"; tmux paste-buffer'
 
 ################ キーバインド ################
 
+set -g extended-keys always
+set -g extended-keys-format csi-u
+set -as terminal-features '*:extkeys'
+
 # プレフィックスキー
 unbind C-b
 set -g prefix C-z
